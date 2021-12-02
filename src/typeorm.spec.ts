@@ -23,6 +23,7 @@ describe('TypeormConfigService', () => {
 
     it('should throw Typeorm Config Not Found', () => {
         const typeormConfigService = new TypeOrmConfigService(configService);
+
         expect(() => typeormConfigService.createTypeOrmOptions()).toThrow(Error);
         expect(() => typeormConfigService.createTypeOrmOptions()).toThrow(new Error('Typeorm Config Not Found'));
     });
@@ -42,6 +43,7 @@ describe('TypeormConfigService', () => {
 
         const typeormConfigService = new TypeOrmConfigService(configService);
         const typeormOptions = typeormConfigService.createTypeOrmOptions();
+
         expect(typeormOptions.type).toEqual('mysql');
         expect(typeormOptions.username).toEqual('TestUsername');
         expect(typeormOptions.password).toEqual('TestPassword');
