@@ -1,11 +1,13 @@
 module.exports = {
     branches: ['master', 'next'],
     plugin: [
+        '@semantic-release/commit-analyzer',
+        '@semantic-release/release-notes-generator',
         [
             '@semantic-release/npm',
             {
                 npmPublish: true,
-                pkgRoot: '@deegda/davoda-util'
+                pkgRoot: 'dist'
             }
         ],
         [
