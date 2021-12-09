@@ -4,7 +4,8 @@ module.exports = {
         [
             '@semantic-release/npm',
             {
-                npmPublish: true
+                npmPublish: true,
+                pkgRoot: '@deegda/davoda-util'
             }
         ],
         [
