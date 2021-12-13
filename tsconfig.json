@@ -9,9 +9,11 @@
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
         "allowSyntheticDefaultImports": true,
-        "target": "es2019",
+        "strictPropertyInitialization": false,
+        "target": "es2017",
         "sourceMap": true,
         "outDir": "./dist",
+        "baseUrl": "./",
         "incremental": true,
         "skipLibCheck": true,
         "strict": true,
@@ -19,7 +21,5 @@
         "forceConsistentCasingInFileNames": false,
         "noFallthroughCasesInSwitch": false,
         "typeRoots": ["./node_modules/@types"]
-    },
-    "include": ["**/*"],
-    "exclude": ["node_modules, dist"]
+    }
 }
