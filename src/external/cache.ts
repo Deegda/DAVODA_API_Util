@@ -30,7 +30,7 @@ export class CacheService {
 
     async set(key: string, value: string, ttl: number) {
         try {
-            const a = await this.cache.set(key, value, ttl);
+            const a = await this.cache.set(key, value, { ttl });
             return a;
         } catch (e) {
             throw e;
