@@ -21,7 +21,8 @@ export class CacheService {
 
     async get(key: string) {
         try {
-            return await this.cache.get(key);
+            const a = await this.cache.get(key);
+            return a;
         } catch (e) {
             throw e;
         }
@@ -29,7 +30,8 @@ export class CacheService {
 
     async set(key: string, value: string, ttl: number) {
         try {
-            await this.cache.set(key, value, ttl);
+            const a = await this.cache.set(key, value, ttl);
+            return a;
         } catch (e) {
             throw e;
         }
