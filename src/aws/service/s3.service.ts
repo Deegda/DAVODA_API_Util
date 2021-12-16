@@ -1,7 +1,7 @@
 import { Inject, Injectable } from '@nestjs/common';
 import * as AWS from 'aws-sdk';
 import { ClientConfiguration, PutObjectRequest } from 'aws-sdk/clients/s3';
-import { CONFIG_CONNECTION_OPTIONS } from '..';
+import { CONFIG_CONNECTION_OPTIONS } from '../constant';
 
 @Injectable()
 export class S3Service {
