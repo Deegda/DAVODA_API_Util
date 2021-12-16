@@ -33,7 +33,10 @@ export class MailerService {
             html: `<p>${code}</p>`
         };
 
-        transpoter.sendMail(message);
+        transpoter
+            .sendMail(message)
+            .then(() => 'mail send success')
+            .catch(() => 'mail send failed');
     }
 }
 
