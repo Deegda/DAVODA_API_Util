@@ -1,5 +1,19 @@
-import { CACHE_MANAGER, Inject, Injectable } from '@nestjs/common';
+import { CacheModuleOptions, CacheOptionsFactory, CACHE_MANAGER, Inject, Injectable } from '@nestjs/common';
+import { ConfigService } from '@nestjs/config';
 import { Cache } from 'cache-manager';
+
+@Injectable()
+export class CacheConfigService implements CacheOptionsFactory {
+    constructor(private readonly configService: ConfigService) {}
+
+    createCacheOptions() {
+        const options = this.configService.get<CacheModuleOptions>('cache') || {};
+
+        options.host ??= this.configService.get('REDIS_HOST');
+
+        return options;
+    }
+}
 
 @Injectable()
 export class CacheService {
