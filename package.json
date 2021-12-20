@@ -28,7 +28,6 @@
         "semantic-release": "semantic-release"
     },
     "dependencies": {
-        "@aws-sdk/client-s3": "^3.44.0",
         "@aws-sdk/client-ses": "^3.43.0",
         "@nestjs/common": "^8.0.0",
         "@nestjs/config": "^1.1.5",
