@@ -21,8 +21,8 @@ export class S3Service {
         return this.#S3Client
             .putObject(params)
             .then(() => this.#createBucketURL(params))
-            .catch(() => {
-                throw new BadRequestException();
+            .catch(e => {
+                throw new BadRequestException(e.message);
             });
     }
 }
