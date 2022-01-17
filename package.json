@@ -11,10 +11,6 @@
         "url": "https://github.com/Deegda/DAVODA_API_Util.git"
     },
     "publishConfig": {
-        "access": "public",
-        "branches": [
-            "master"
-        ],
         "registry": "https://npm.pkg.github.com"
     },
     "scripts": {
