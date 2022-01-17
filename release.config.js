@@ -11,7 +11,9 @@ module.exports = {
                     '[version ${nextRelease.version}](${releases.filter(release => /github.com/i.test(release.url))[0].url}) :tada:',
                 assets: [
                     {
-                        assets: 'dist/*.tgz'
+                        path: ['dist'],
+                        name: 'build-${nextRelease.gitTag}.js',
+                        label: 'build JS (${nextRelease.gitTag}) distribution'
                     }
                 ]
             }
@@ -25,7 +27,7 @@ module.exports = {
         [
             '@semantic-release/npm',
             {
-                tarballDir: 'dist'
+                tarballDir: 'build-${nextRelease.gitTag}.js'
             }
         ]
     ]
