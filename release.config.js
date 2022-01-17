@@ -4,7 +4,7 @@ module.exports = {
         [
             '@semantic-release/npm',
             {
-                tarballDir: 'dist-${nextRelease.gitTag}'
+                tarballDir: 'dist-${nextRelease.gitTag}.zip'
             }
         ],
         [
@@ -15,8 +15,8 @@ module.exports = {
                     '[version ${nextRelease.version}](${releases.filter(release => /github.com/i.test(release.url))[0].url}) :tada:',
                 assets: [
                     {
-                        path: 'dist',
-                        label: 'dist-${nextRelease.gitTag}'
+                        path: 'dist.zip',
+                        label: 'dist-${nextRelease.gitTag}.zip'
                     }
                 ]
             }
