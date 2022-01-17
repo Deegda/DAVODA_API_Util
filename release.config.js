@@ -1,7 +1,7 @@
 module.exports = {
     branches: ['master', 'next'],
     plugin: [
-        '@semantic-release/npm',
+        ['@semantic-release/npm', { tarballDir: 'dist' }],
         [
             '@semantic-release/github',
             {
