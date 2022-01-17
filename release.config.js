@@ -9,13 +9,6 @@ module.exports = {
                 successComment:
                     ':tada: This ${issue.pull_request ? "PR is included" : "issue has been resolved"} in' +
                     '[version ${nextRelease.version}](${releases.filter(release => /github.com/i.test(release.url))[0].url}) :tada:',
-                assets: [
-                    {
-                        path: ['dist'],
-                        name: 'build-${nextRelease.gitTag}.js',
-                        label: 'build JS (${nextRelease.gitTag}) distribution'
-                    }
-                ]
             }
         ],
         [
@@ -27,7 +20,7 @@ module.exports = {
         [
             '@semantic-release/npm',
             {
-                tarballDir: 'build-${nextRelease.gitTag}.js'
+                pkgRoot: 'dist'
             }
         ]
     ]

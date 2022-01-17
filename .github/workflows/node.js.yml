@@ -25,9 +25,6 @@ jobs:
 
             - name: build
               run: yarn build
-
-            - name: ZIP build
-              run: zip -r dist.zip dist
             
             - name: Release
               env:
