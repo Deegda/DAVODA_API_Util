@@ -24,7 +24,7 @@ module.exports = {
         [
             '@semantic-release/npm',
             {
-                tarballDir: 'dist.zip'
+                tarballDir: 'dist-${nextRelease.version}.zip'
             }
         ]
     ]
