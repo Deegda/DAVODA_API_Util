@@ -4,8 +4,8 @@
     "description": "DAVODA Util",
     "author": "",
     "license": "MIT",
-    "main": "./dist/index.js",
-    "typings": "./dist/index.d.ts",
+    "main": "./index.js",
+    "typings": "./index.d.ts",
     "repository": {
         "type": "git",
         "url": "https://github.com/Deegda/DAVODA_API_Util.git"

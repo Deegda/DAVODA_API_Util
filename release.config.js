@@ -2,12 +2,6 @@ module.exports = {
     branches: ['master', 'next'],
     plugin: [
         [
-            '@semantic-release/npm',
-            {
-                tarballDir: 'dist-${nextRelease.gitTag}.zip'
-            }
-        ],
-        [
             '@semantic-release/github',
             {
                 successComment:
@@ -19,6 +13,12 @@ module.exports = {
                         label: 'dist-${nextRelease.gitTag}.zip'
                     }
                 ]
+            }
+        ],
+        [
+            '@semantic-release/npm',
+            {
+                tarballDir: 'dist-${nextRelease.gitTag}.zip'
             }
         ],
         [
