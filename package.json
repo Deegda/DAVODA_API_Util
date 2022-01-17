@@ -1,11 +1,11 @@
 {
     "name": "@deegda/davoda-util",
-    "version": "0.4.5",
+    "version": "0.0.0-development",
     "description": "DAVODA Util",
     "author": "",
     "license": "MIT",
-    "main": "dist/index.js",
-    "typings": "src/index.ts",
+    "main": "./dist/index.js",
+    "typings": "./dist/index.d.ts",
     "repository": {
         "type": "git",
         "url": "https://github.com/Deegda/DAVODA_API_Util.git"
@@ -14,7 +14,8 @@
         "access": "public",
         "branches": [
             "master"
-        ]
+        ],
+        "registry": "https://npm.pkg.github.com"
     },
     "scripts": {
         "prebuild": "rimraf dist",
