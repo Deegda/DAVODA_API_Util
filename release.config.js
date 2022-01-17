@@ -1,6 +1,8 @@
 module.exports = {
-    branches: ['master', 'next'],
-    plugins: [
+    branch: 'master',
+    plugin: [
+        '@semantic-release/commit-analyzer',
+        '@semantic-release/release-notes-generator',
         [
             '@semantic-release/github',
             {
@@ -9,8 +11,7 @@ module.exports = {
                     '[version ${nextRelease.version}](${releases.filter(release => /github.com/i.test(release.url))[0].url}) :tada:',
                 assets: [
                     {
-                        path: 'dist.zip',
-                        label: 'dist-${nextRelease.version}.zip'
+                        assets: 'dist/*.tgz'
                     }
                 ]
             }
@@ -24,7 +25,7 @@ module.exports = {
         [
             '@semantic-release/npm',
             {
-                tarballDir: 'dist-${nextRelease.version}.zip'
+                tarballDir: 'dist'
             }
         ]
     ]
