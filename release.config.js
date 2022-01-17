@@ -6,9 +6,7 @@ module.exports = {
         [
             '@semantic-release/github',
             {
-                successComment:
-                    ':tada: This ${issue.pull_request ? "PR is included" : "issue has been resolved"} in' +
-                    '[version ${nextRelease.version}](${releases.filter(release => /github.com/i.test(release.url))[0].url}) :tada:',
+                assets: 'dist/*.tgz'
             }
         ],
         [
@@ -20,7 +18,8 @@ module.exports = {
         [
             '@semantic-release/npm',
             {
-                pkgRoot: 'dist'
+                npmPublish: false,
+                tarballDir: 'dist'
             }
         ]
     ]
