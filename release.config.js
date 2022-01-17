@@ -1,6 +1,6 @@
 module.exports = {
     branches: ['master', 'next'],
-    plugin: [
+    plugins: [
         [
             '@semantic-release/github',
             {
