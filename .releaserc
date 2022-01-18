@@ -1,0 +1,22 @@
+{
+    "branches": ["master", "next"],
+    "plugins": [
+        [
+            "@semantic-release/github", {
+                "assets": "dist/*.tgz"
+            }
+        ],
+        [
+            "@semantic-release/exec",
+            {
+                "successCmd": "echo 'RELEASE_VERSION=${nextRelease.version}' >> $GITHUB_ENV"
+            }
+        ],
+        [
+            "@semantic-release/npm",
+            {
+                "pkgRoot": "dist"
+            }
+        ]
+    ]
+}
