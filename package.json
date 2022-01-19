@@ -24,7 +24,7 @@
         "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
         "test:e2e": "jest --config ./test/jest-e2e.json",
         "semantic-release": "semantic-release",
-        "packaging": "webpack && dts-bundle-generator --no-check -o dist/index.d.ts dist/index.d.ts && rimraf dist/src dist/index.js dist/index.js.map"
+        "packaging": "webpack && dts-bundle-generator --no-check -o dist/index.d.ts dist/index.d.ts && rimraf dist/src dist/index.js dist/index.js.map dist/tsconfig.build.tsbuildinfo"
     },
     "dependencies": {
         "@aws-sdk/client-ses": "^3.43.0",
