@@ -25,6 +25,9 @@ jobs:
 
             - name: build
               run: yarn build
+
+            - name: packaging
+              run: yarn packaging
             
             - name: Release
               env:
