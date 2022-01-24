@@ -3,7 +3,7 @@ const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
     target: 'node',
-    entry: path.resolve(__dirname, 'dist/index.js'),
+    entry: ['@babel/polyfill', path.resolve(__dirname, 'dist/index.js')],
     output: {
         filename: 'main.min.js',
         path: path.resolve(__dirname, 'dist')
