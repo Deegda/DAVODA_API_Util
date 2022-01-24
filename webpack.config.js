@@ -1,9 +1,7 @@
 const path = require('path');
-const TerserJSPlugin = require('terser-webpack-plugin');
 const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
-    mode: 'production',
     target: 'node',
     entry: path.resolve(__dirname, 'dist/index.js'),
     output: {
@@ -11,12 +9,21 @@ module.exports = {
         path: path.resolve(__dirname, 'dist')
     },
     externals: [nodeExternals()],
-    optimization: {
-        minimize: true,
-        minimizer: [
-            new TerserJSPlugin({
-                extractComments: false
-            })
+    module: {
+        rules: [
+            {
+                test: /\.js?$/,
+                include: [path.resolve(__dirname, 'dist')],
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env'],
+                        plugins: ['@babel/plugin-proposal-class-properties', '@babel/plugin-transform-runtime']
+                    }
+                }
+            }
         ]
-    }
+    },
+    mode: 'production'
 };
