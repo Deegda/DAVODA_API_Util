@@ -15,8 +15,7 @@ export class AwsModule {
                     inject: options.inject || []
                 },
                 S3Service
-            ],
-            exports: [S3Service]
+            ]
         };
     }
 }
