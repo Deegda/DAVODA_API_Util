@@ -13,9 +13,9 @@ export class AwsModule {
                     provide: CONFIG_CONNECTION_OPTIONS,
                     useFactory: options.useFactory,
                     inject: options.inject || []
-                },
-                S3Service
-            ]
+                }
+            ],
+            exports: [S3Service]
         };
     }
 }
