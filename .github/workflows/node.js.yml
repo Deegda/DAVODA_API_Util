@@ -19,12 +19,19 @@ jobs:
               uses: actions/setup-node@v1
               with:
                 node-version: 14
+
             - name: Install dependencies
               run: yarn
+
             - name: build
               run: yarn build
+
+            - name: packaging
+              run: yarn packaging
+            
             - name: Release
               env:
                 GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-                NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-              run: yarn semantic-release
+                NPM_TOKEN: ${{ secrets.GH_TOKEN }}
+              run:
+                yarn semantic-release
