@@ -4,7 +4,7 @@
     "description": "DAVODA Util",
     "author": "",
     "license": "MIT",
-    "main": "./main.min.js",
+    "main": "./index.js",
     "typings": "./index.d.ts",
     "repository": {
         "type": "git",
