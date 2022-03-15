@@ -27,6 +27,7 @@
         "packaging": "webpack && dts-bundle-generator --no-check -o dist/index.d.ts dist/index.d.ts && rimraf dist/src dist/index.js dist/index.js.map dist/tsconfig.build.tsbuildinfo"
     },
     "dependencies": {
+        "@algoan/nestjs-logging-interceptor": "^2.1.10",
         "@aws-sdk/client-ses": "^3.43.0",
         "@babel/polyfill": "^7.12.1",
         "@babel/runtime": "^7.16.7",
@@ -38,9 +39,11 @@
         "@nestjs/platform-express": "^8.0.0",
         "@nestjs/typeorm": "^8.0.2",
         "@types/nodemailer": "^6.4.4",
+        "@vendia/serverless-express": "^4.5.4",
         "aws-sdk": "^2.1046.0",
         "bcrypt": "^5.0.1",
         "cache-manager": "^3.6.0",
+        "nestjs-pino": "^2.5.0",
         "nodemailer": "^6.7.2",
         "passport": "^0.5.2",
         "passport-jwt": "^4.0.0",
