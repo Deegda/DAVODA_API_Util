@@ -4,4 +4,4 @@ export * from './src/external';
 export * from './src/bcrypt';
 export * from './src/code';
 export * from './src/uuid';
-export * from './src/server';
+export * from './src/bootstrap';
